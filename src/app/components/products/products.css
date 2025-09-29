@@ -1,0 +1,78 @@
+/* Barra de filtros */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-field {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+/* Grid de produtos */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Card de produto */
+.produto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.produto-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Preço e descrição */
+.preco {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #1976d2;
+  margin-bottom: 8px;
+}
+
+.descricao {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+small {
+  font-size: 0.8em; /* Reduzindo o tamanho da fonte */
+  color: #777; /* Opcional: cor mais discreta */
+}
+
+/* Botão de compra */
+button[mat-raised-button] {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-icon {
+  margin-right: 6px;
+  font-size: 18px;
+}

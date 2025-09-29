@@ -1,0 +1,40 @@
+<h2 class="carrinho-titulo">Carrinho de Compras</h2>
+<!-- Lista de produtos no carrinho -->
+<div class="cart-wrapper">
+  <div class="cart-list">
+    <mat-card *ngFor="let item of carrinho; let i = index">
+      <mat-card-title>{{ item.nome }}</mat-card-title>
+      <mat-card-content>
+        Preço: R$ {{ item.preco }} <br />
+        <label>
+  Quantidade:
+  <input type="number" min="1" [(ngModel)]="item.quantidade" (change)="atualizarTotal()" />
+</label>
+      </mat-card-content>
+      <button mat-button color="warn" (click)="remover(i)">Remover</button>
+    </mat-card>
+  </div>
+
+  <!-- Total da compra -->
+  <div class="cart-total">
+    <mat-card>
+      <mat-card-title>Total:</mat-card-title>
+      <mat-card-content>
+        <h3>R$ {{ total }}</h3>
+      </mat-card-content>
+
+      <button
+        mat-raised-button
+        color="accent"
+        style="margin-bottom: 10px"
+        (click)="finalizarCompra()"
+      >
+        Finalizar Compra
+      </button>
+
+      <button mat-raised-button color="primary" (click)="limparCarrinho()">
+        Esvaziar Carrinho
+      </button>
+    </mat-card>
+  </div>
+</div>

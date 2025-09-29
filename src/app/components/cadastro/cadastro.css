@@ -1,0 +1,14 @@
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+    .custom-form-field {
+      padding-top: 15px;
+      width: 300px;
+      height: 80px; /* Adjust as needed */
+      font-size: 18px; /* Increase font size for label, input, and error */
+    }
+
+
+
+

@@ -1,0 +1,16 @@
+<div class="example-container">
+  <mat-form-field class="custom-form-field">
+    <mat-label>Coloque seu Email</mat-label>
+    <input
+      matInput
+      placeholder="pat@example.com"
+      [formControl]="email"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (email.invalid) {
+    <mat-error>{{errorMessage()}}</mat-error>
+    } </mat-form-field
+  ><br />
+  <button matButton="filled">Enviar</button>
+</div>
